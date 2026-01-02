@@ -2,8 +2,6 @@ function generatePoem(event) {
   event.preventDefault();
 
   let promptInput = document.querySelector("#user-input");
-
-  let apiKey ="3374e73o90b5b05b6faa166tf86b3d63";
   let context ="You are a Persian poet. Write beautiful and meaningful Persian poems.";
 
   let prompt =
@@ -26,7 +24,8 @@ function generatePoem(event) {
     `<div style="text-align:left; direction:ltr;"><strong>Mona's AI Generator</strong></div>` +
    `Return ONLY these two divs. Nothing else.`;
 
-  let apiUrl =`https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+  let apiUrl = `/.netlify/functions/generatePoem?prompt=${encodeURIComponent(prompt)}&context=${encodeURIComponent(context)}`;
+
 
   let poemElement = document.querySelector("#poem");
   poemElement.classList.remove("hidden");
