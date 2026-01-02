@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
   <link rel="stylesheet" href="src/style.css">
   <title>AI Persian Poem Generator</title>
 </head>
@@ -13,14 +14,11 @@
     </header>
     
     <main>
-      <form>
+      <form id="poem-form">
         <input type="text" class="instructions" placeholder="Enter the topic of Persian Poem" autofocus required autocomplete="off">
         <input type="submit" class="submit-button" value="Submit">
       </form>
-      <div class="poem">
-        بر چهره گل نسیم نوروز خوش است
-        <br>
-        در صحن چمن روی دل‌افروز خوش است
+      <div class="poem" id="poem">
       </div>
     </main>
     <footer>
