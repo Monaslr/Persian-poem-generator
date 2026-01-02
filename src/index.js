@@ -5,7 +5,15 @@ function generatePoem(event) {
 
   let apiKey ="3374e73o90b5b05b6faa166tf86b3d63";
   let context ="You are a Persian poet. Write beautiful and meaningful Persian poems.";
-  let prompt =`Write a Persian poem about ${promptInput.value} in 4 lines.seprate the lines with <br>.  add translate it to english with text-alighn: left and add Mona's AI Generator signature at the end of the poem with <strong> element. make sure english version and signiture placed left align. also persian should be on right align;`;
+  const prompt =
+  `Write a Persian poem about "${promptInput.value}" with exactly 4 lines.make sure don't include any html tags in the answer ` +
+  ` Separate each Persian line using <br>.` +
+  ` Then provide an English translation with the same 4-line structure using <br>.` +
+  ` Output as HTML with two blocks:` +
+  ` 1) Persian in a <div style="text-align:right;"> ... </div>` +
+  ` 2) English  and signiture in a <div style="text-align:left;"> ... </div>` +
+  ` for signiture add <strong>Mona's AI Generator</strong> left aligned (inside the English block).` +
+  ` Return ONLY the HTML (no extra text).`;
 
   let apiUrl =`https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
