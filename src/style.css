@@ -1,15 +1,26 @@
 body {
-  background-color: #F9FDFC;
+  background-image: url("https://www.persiscollection.com/wp-content/uploads/2024/10/Persian-Traditional-Design-Wallpaper-%E2%80%93-Traditional-Iranian-shapes-5.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0 20px;
   font-family: Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00A592;
+  color: #1D326C;
 }
 
 .container {
-  margin: 120px auto;
+  margin: 120px 50px;
   max-width: 600px;
+  
+  padding: 30px;
+  background-color:#afc3da;
+  border-radius: 15px;
+  box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.1);
+
 }
 
 header {
@@ -25,7 +36,7 @@ h1 {
 }
 
 .poem-container {
-  background-color: white;
+  background-color: #e6ebf2;
   margin-bottom: 30px;
   padding: 15px 20px;
   box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
@@ -55,7 +66,7 @@ form {
 
 .submit-button {
   margin-left: 10px;
-  background: #00A592;
+  background: #1D326C;
   color: white;
   border: none;
   width: 150px;
@@ -66,10 +77,10 @@ form {
 
 .poem {
   font-size: 16px;
-  background-color: #fff;
+  background-color: #e6ebf2;
   padding: 20px;
   line-height: 2;
-  border-right: 3px solid #00A592;
+  border-right: 3px solid #1D326C;
   box-shadow: 0px 4px 30px 0px rgba(39, 33, 66, 0.03);
   text-align: right;
   border-radius: 5px;
@@ -78,6 +89,7 @@ form {
 
 .generating {
   animation: blinker 1s linear infinite;
+  text-align: left;
 }
 
 @keyframes blinker {
@@ -97,5 +109,5 @@ footer {
 }
 
 strong{
-  color: #00A592;
+  color: #1D326C;
 }
