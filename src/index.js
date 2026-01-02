@@ -8,6 +8,10 @@ function generatePoem(event) {
   let prompt =`Write a Persian poem about ${promptInput.value} in 4 lines.seprate the lines with <br>.also add Mona's AI Generator signature at the end of the poem with <strong> element.`;
   let apiUrl =`https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+  let poemElement = document.querySelector("#poem");
+  poemElement.classList.remove("hidden");
+  poemElement.innerHTML = `<div class="generating">⏳ Generating a Persian poem about ${promptInput.value}...</div>`;
+
   axios.get(apiUrl).then(displayPoem);
 }
 

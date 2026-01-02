@@ -13,14 +13,15 @@
     <header>
       <h1>AI Persian Poem Generator</h1>
     </header>
-    
     <main>
-      <form id="poem-form">
-        <input type="text" class="instructions" id="user-input" placeholder="Enter the topic of Persian Poem" autofocus required autocomplete="off">
-        <input type="submit" class="submit-button" value="Submit">
-      </form>
-      <div class="poem" id="poem">
+      <div class="poem-container">
+        <form id="poem-form">
+          <input type="text" class="instructions" id="user-input" placeholder="Enter the topic of a Persian Poem" autofocus required autocomplete="off">
+          <input type="submit" class="submit-button" value="Submit">
+        </form>
+        <div class="hint"> i.e: Flower, Love or sea</div>
       </div>
+      <div class="poem hidden" id="poem" ></div>  
     </main>
     <footer>
       This AI project was coded by <a href="https://www.linkedin.com/in/mona-salari-71654a169/">Mona Salari</a> and is open-sourced on <a href="https://github.com/monasalari/Persian-poem-generator">GitHub</a> and is hosted on <a href="https://persian-poem-generator.netlify.app/">Netlify</a>.
